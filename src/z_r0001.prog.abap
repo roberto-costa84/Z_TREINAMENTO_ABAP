@@ -5,4 +5,4 @@
 *&---------------------------------------------------------------------*
 REPORT Z_R0001 NO STANDARD PAGE HEADING.
 
-WRITE:/ 'Hello World'.
+WRITE 'Hello World'.

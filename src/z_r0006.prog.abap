@@ -24,7 +24,11 @@ ELSEIF p_subt = 'X'.
 ELSEIF p_mult = 'X'.
   v_result = p_num1 * p_num2.
 ELSEIF p_divi = 'X'.
+  TRY.
   v_result = p_num1 / p_num2.
+  CATCH CX_SY_ZERODIVIDE.
+    MESSAGE 'DIVISÃO POR ZERO NÃO PERMITIDO!' TYPE 'I'.
+  ENDTRY.
 ENDIF.
 
-WRITE: 'Resultado:', v_result.
+WRITE: 'RESULTADO:', v_result.
